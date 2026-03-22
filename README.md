@@ -9,11 +9,15 @@
 - 📋 **Мой список**: Удобный просмотр всех отслеживаемых позиций.
 - ❌ **Удаление**: Быстрое удаление товара из списка через Inline-кнопки под сообщениями.
 
-## 📸 Скриншоты
-| Главное меню | Добавление товара | Уведомление о цене |
+## 📷 Скриншоты
+
+| Главное меню | Помощь (Help) | Добавление товара |
 | :---: | :---: | :---: |
-| ![Меню](<img width="672" height="280" alt="image" src="https://github.com/user-attachments/assets/b4d4c950-185e-49fe-b75e-0e57f0a0d2d5" />
-) | ![Добавление](ссылка_на_фото) | ![Уведомление](ссылка_на_фото) |
+| ![Меню](screenshots/start.png) | ![Помощь](screenshots/help.png) | ![Добавление](screenshots/add.png) |
+
+| Мои товары | Уведомление о цене |
+| :---: | :---: |
+| ![Список](screenshots/my_products.png) | ![Уведомление](screenshots/notification.png) |
 
 ## 🛠 Стек технологий
 - **Язык**: Python 3.10+
@@ -29,6 +33,7 @@
 - **database/** — описание моделей SQLAlchemy и управление БД.
 - **handlers/** — обработчики команд и сообщений (custom и default).
 - **keyboards/** — генераторы Inline и Reply клавиатур.
+- **screenshots/** — скриншоты работы бота.
 - **utils/** — планировщик задач (scheduler) и вспомогательные скрипты.
 - **.env.template** — шаблон переменных окружения для быстрой настройки.
 - **docker-compose.yml** — конфигурация для запуска связки бота и базы данных.
@@ -41,7 +46,7 @@
 ### 1. Подготовка окружения
 Клонируйте репозиторий и перейдите в папку проекта:
 ```bash
-git clone <ссылка_на_ваш_репозиторий>
+git clone https://github.com/Hikikomori141/Price_Traker_Bot.git
 cd Price_Traker_Bot
 ```
 
@@ -83,7 +88,7 @@ python main.py
 ### 1. Подготовка
 Убедитесь, что у вас установлен Docker Desktop. Клонируйте репозиторий и перейдите в папку проекта:
 ```bash
-git clone <ссылка_на_твой_репозиторий>
+git clone https://github.com/Hikikomori141/Price_Traker_Bot.git
 cd Price_Traker_Bot
 ```
 
@@ -110,8 +115,6 @@ docker-compose up -d --build
 - **Просмотр логов бота**: docker-compose logs -f bot
 - **Остановка проекта**: docker-compose down
 - **Перезапуск**: docker-compose restart
-
-> **Совет по работе с БД:** Для просмотра таблиц через DBeaver при запущенном Docker используйте `Host: localhost`, `Port: 5432` и данные из вашего `.env`.
 
 ## 🗺 Roadmap
 - [ ] Добавление поддержки графиков изменения цены.
